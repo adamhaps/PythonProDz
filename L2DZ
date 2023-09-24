@@ -1,0 +1,48 @@
+import random
+
+def dz():
+    task = int(input('Домашкаделатель3000 приветствует Вас, Введите номер задания: '))
+    if task == 1:
+        def get_round():
+            S = 3.14 * (2 * radius)
+            print(('Площадь круга равна: ') + S)
+
+        radius = int(input('Введите радиус окружности: '))
+
+        get_round()
+
+    if task == 2:
+        def glob():
+            a = 99
+            if a <= 100:
+                a = 101
+            print(a)
+
+        glob()
+
+        a = 100
+        if a <= 100:
+            a = 102
+        print(a)
+
+    if task == 3:
+        def count_letter():
+            string = input('Введите строку: ')
+            letter = input("Введите букву для проверки: ")
+            print("Кол-во данных символов в строке:", string.count(letter))
+
+        count_letter()
+
+    if task == 4:
+        def log_in():
+            name = input('Введите имя пользователя: ')
+            password = ''
+            for i in range(10):  # Количество символов (16)
+                password += random.choice(list('1234567890abcdefghigklmnopqrstuvyxwzABCDEFGHIGKLMNOPQRSTUVYXWZ'))
+
+            print('Привет,', name + ',', 'Ваш пароль:', password)
+
+        log_in()
+
+   
+dz()

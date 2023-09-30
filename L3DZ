@@ -1,0 +1,70 @@
+'''
+class  Student():
+    def __int__(self):
+        self.name = name
+        self.grate = grate
+
+    def say_hello(self):
+        print(f"Привет, {self.name} из {self.grate} класса")
+
+
+st1 = Student()
+st1.name = input("Имя ученика: ")
+st1.grate = input("Класс ученика: ")
+st1.say_hello()
+'''
+"""
+class  Animal():
+    def __int__(self):
+        self.name = name
+        self.sound = sound
+
+    def say_voice(self):
+        print(f"Голос животного: {self.sound}")
+
+
+an1 = Animal()
+an1.name = input("Имя животного: ")
+an1.sound = input("Звук животного: ")
+an1.say_voice()
+"""
+
+"""
+class Book():
+    def __int__(self):
+        self.name = name
+        self.author = author
+        self.plot = plot
+
+
+    def say_inf(self):
+        print(f": {self.name}")
+        print(f"Автор книги: {self.author}")
+        print(self.plot)
+
+
+b1 = Book()
+b1.name = input("Название книги: ")
+b1.author = input("Автор книги: ")
+b1.plot = input("Информация о книге: ")
+b1.say_inf()
+"""
+
+class Fruit():
+    def __int__(self):
+        self.name = name
+        self.color = color
+        self.plot = plot
+
+
+    def say_inf(self):
+        print(f": {self.name}")
+        print(f"Цвет фрукта: {self.color}")
+        print(self.plot)
+
+
+f1 = Fruit()
+f1.name = input("Название фрукта: ")
+f1.color = input("Цвет фрукта: ")
+f1.plot = input("Информация о фрукте: ")
+f1.say_inf()

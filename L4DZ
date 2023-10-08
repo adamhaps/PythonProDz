@@ -1,0 +1,79 @@
+import pygame
+import pygame.time
+
+pygame.init()
+
+def bird_anim():
+    global bird_anim_count
+    bird_anim_count += 1
+
+    if bird_anim_count == 2:
+        bird_anim_count = 0
+
+def move_ground():
+    global ground_rect, ground_rect2
+    ground_rect.x -= 20
+    ground_rect2.x -= 20
+    if ground_rect.x <= -900:
+        ground_rect.x = ground_rect2.x + 900
+    if ground_rect2.x <= -900:
+        ground_rect2.x = ground_rect.x + 900
+
+def gravitation():
+    global bird_rect, gravity, acceleration, jump
+    bird_rect.y += gravity
+    gravity += acceleration
+    #if gravity >= 6:
+        #gravity = 6
+
+
+W = 864
+H = 768
+FPS = 35
+
+sc = pygame.display.set_mode((W, H))
+pygame.display.set_caption("Тапок")
+clock = pygame.time.Clock()
+
+bg = pygame.image.load("images/bg.png")
+
+bird = [pygame.image.load("images/bird1.png"),
+        pygame.image.load("images/bird2.png"),
+        pygame.image.load("images/bird3.png")]
+
+bird_anim_count = 0
+bird_rect = bird[bird_anim_count].get_rect(x=250, y=290)
+
+ground = pygame.image.load("images/ground.png")
+ground_x = 0
+ground_rect = ground.get_rect(x=ground_x, y=600)
+ground_rect2 = ground.get_rect(x=ground_x + 900, y=600)
+
+acceleration = 0.3
+gravity = 12
+
+
+
+while True:
+    pygame.display.flip()
+
+    for event in pygame.event.get():
+
+        if event.type == pygame.QUIT:
+            exit()
+
+
+
+
+    sc.blit(bg, (0, 0))
+    sc.blit(bird[bird_anim_count], bird_rect)
+    sc.blit(ground, ground_rect)
+    sc.blit(ground, ground_rect2)
+
+    bird_anim()
+    move_ground()
+    gravitation()
+
+    clock.tick(FPS)
+
+pygame.quit()

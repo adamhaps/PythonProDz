@@ -1,0 +1,41 @@
+import turtle
+
+
+class Rectangle():
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+
+    def get_info(self):
+        self.surface = self.width * self.height
+        print(f"S = {self.surface}")
+
+class Circle:
+    def __init__(self, surface, perimeter):
+        self.surface = surface
+        self.perimeter = perimeter
+
+
+    def get_info(self):
+        self.radius = self.perimeter // (3.14 * 2)
+        print(f"R = {self.radius}")
+
+class Triangle():
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+
+    def get_info(self):
+        self.surface = 0.5 * self.base * self.height
+        print(f"S = {self.surface}")
+
+rect1 = Rectangle(10, 10)
+rect1.get_info()
+
+circle1 = Circle(10, 100)
+circle1.get_info()
+
+triangle1 = Triangle(20, 30)
+triangle1.get_info()

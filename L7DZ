@@ -1,0 +1,54 @@
+class Car():
+    def __init__(self):
+        self.make = make
+        self.model = model
+
+    def start_engine(self):
+        print(f"Машина {self.make + self.model} заведена")
+
+    def stop_engine(self):
+        print(f"Машина {self.make + self.model} заглушена")
+
+class Sedan(Car):
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+
+class SUV(Car):
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+
+lada1 = Sedan("Lada ", "Granta")
+lada1.start_engine()
+
+lexus1 = SUV("Lexus ", "LX570")
+lexus1.stop_engine()
+
+class Product():
+    def __init__(self):
+        self.name = name
+        self.price = price
+
+    def get_info(self):
+        print(f"Название: {self.name}, цена: {self.price}")
+
+
+class Book(Product):
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+
+class Toy(Product):
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+book1 = Book("Анна Каренина", 1799)
+book1.get_info()
+
+toy1 = Book("Матрешка", 899)
+toy1.get_info()
